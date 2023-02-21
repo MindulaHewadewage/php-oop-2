@@ -1,22 +1,22 @@
 <?php
-require_once __DIR__ . '/category.php'
+require_once __DIR__ . '/Category.php';
 
 class Products
 {
-    public $id;
-    public $img;
-    public $title;
-    public $price;
-    public $category;
+    protected $id;
+    protected $img;
+    protected $title;
+    protected $price;
+    protected $category;
 
 
-    public function __construct($id, $img, $title, $price,Category $category)
+    public function __construct($img, $title, $price, Category $category)
     {
+        $this->setId();
         $this->setImg($img);
         $this->setTitle($title);
         $this->setPrice($price);
         $this->setCategory($category);
-
     }
 
 
@@ -97,5 +97,4 @@ class Products
         $this->category = $category;
         return $this;
     }
-
 }

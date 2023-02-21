@@ -5,7 +5,7 @@ class Category
     private $name;
     private $icon;
 
-    public function __construct()
+    public function __construct($name, $icon)
     {
         $this->setName($name);
         $this->setIcon($icon);

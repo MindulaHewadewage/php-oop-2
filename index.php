@@ -1,19 +1,8 @@
 <?php
-require_once __DIR__ . '/products.php'
-?>
+require_once __DIR__ . '/Products.php';
 
-<!DOCTYPE html>
-<html lang="en">
+$category = new Category('Dog', 'url');
+$prodotto = new Products('url', 'Osso', 4, $category);
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
+var_dump($category);
+var_dump($prodotto);
